@@ -38,9 +38,9 @@ void FillIntegerArrayWithRand(int64_t* arr, int32_t size, int32_t int_right_bord
     }
 }
 
-void FillDoubleArrayWithRand(double* arr, int32_t size, double int_right_border, double int_left_border){
+void FillDoubleArrayWithRand(double* arr, int32_t size, double double_right_border, double double_left_border){
     for ( int32_t i{}; i < size ; ++i){
-        arr[i] = int_left_border + static_cast<double>(rand()) / (RAND_MAX / (int_right_border - int_left_border));
+        arr[i] = double_left_border + (rand()) / (RAND_MAX / (double_right_border - double_left_border));
     }
 }
 
@@ -84,7 +84,7 @@ void rearrangeEvenOddNumbers(double* arr, int32_t size) {
                 }
                 arr[insert_pos] = temp;
             }
-            insert_pos++; 
+            ++insert_pos; 
         }
     }
 }
@@ -101,7 +101,7 @@ int32_t countUniqueElements(double* arr, int32_t size) {
             }
         }
         if (is_unique) {
-            unique_count++;
+            ++unique_count;
         }
     }
     return unique_count;
@@ -119,7 +119,7 @@ void rearrangeArrayInPlace(double* arr, int32_t size) {
                 }
                 arr[insert_pos] = temp;
             }
-            insert_pos++;
+            ++insert_pos;
         }
     }
 
@@ -132,7 +132,7 @@ void rearrangeArrayInPlace(double* arr, int32_t size) {
                 }
                 arr[insert_pos] = temp;
             }
-            insert_pos++;
+            ++insert_pos;
         }
     }
 }
